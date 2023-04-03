@@ -1,0 +1,41 @@
+<!-- // Exercise 2 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Profile Picture</title>
+    <script src="./js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div data-ng-repeat="profileUrl in profilepicUrl">
+        <profile-photo data-ng-repeat="profile in profileUrl.Img"></profile-photo>
+    </div>
+
+    <!-- <li ng-repeat="x in profilepicUrl">
+        {{ x.Name + ', ' + x.Country }}
+    </li> -->
+
+    <script>
+        app = angular.module("myApp", []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http.get("Demo.json")
+                .then(function (response) {
+                    $scope.profilepicUrl = response.data.records;
+                })
+            // $scope.profilepicUrl = ['https://plus.unsplash.com/premium_photo-1661326210557-4944e2ad1548?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1204&q=80', 'https://images.unsplash.com/photo-1676928521690-18a513b1f37f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80']
+        })
+        app.directive('profilePhoto', function () {
+            return {
+                restrict: 'AE',
+                template: '<img src={{profile.link1}} alt="" /> \
+                <img src={{profile.link2}} alt="" />\
+                <img src={{profile.link3}} alt="" />'
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise 1</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="myCtrl">
+    <form oninput="x.value=parseInt(a.value)*(100-parseInt(b.value))/100">
+        <input type="number" placeholder="Product Price" data-ng-model="cost" id="a" value="2">
+        <input type="number" placeholder="Discount Percentage" data-ng-model="disc" id="b" value="3">
+        <output name="x" for="a b">Normal output </output>
+        <p data-ng-bind="total()"></p>
+        <p>{{total()}}</p>
+        <p>{{cost}}</p>
+    </form>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.cost = '';
+            $scope.disc = '';
+            $scope.total = function () {
+                if ($scope.cost > 0 && $scope.disc > 0) {
+                    return $scope.cost * (100 - $scope.disc) / 100
+                }
+                else {
+                    return "Invalid Input"
+                }
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>

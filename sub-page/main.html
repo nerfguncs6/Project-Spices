@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../src/jquery-3.6.3.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script src="../src/angular.min.js"></script>
+  <script src="../src/angular-route.js"></script>
+  <link rel="stylesheet" href="../src/swiper-bundle.min.css" />
+  <script src="../src/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="../src/bootstrap.min.css" />
+  <link rel="stylesheet" href="../src/bootstrap-icons-1.10.3/bootstrap-icons.css" />
+  <script src="../js/lmao.js"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>FLAVORS Organic Products and Spices</title>
+</head>
+
+<div class="slideshow-container" style= "width: 100%; height: 600px;" >
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade" style="width: 100%;">
+   
+    <img src="http://themesground.com/flavours/version1/images/slide-img2.jpg" style="width:100% ;   height: 600px;">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+   
+    <img src="http://themesground.com/flavours/version1/images/slide-img1.jpg" style="width:100%;  height: 600px;">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="https://th.bing.com/th/id/OIP.SmcKFa_OzHoz1BZnCvPm2AHaEK?pid=ImgDet&rs=1" style="width:100%;  height: 600px;">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<style>
+  
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+
+
+
+
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+<script>
+  let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+  <section>
+    <div id="container">
+        <!-- set image size -->
+        <div class="photobanner">
+
+          <img class="first bannerimg"
+            src="https://organicgardenshop.net/wp-content/uploads/2022/09/natural_ede662d368894c35a0eaf2b9e9b7fd7f_grande-1.webp">
+          <img class="bannerimg"
+            src="https://salt.tikicdn.com/cache/750x750/ts/product/59/5b/68/652d4367b27fc417dd9b8bcfce22d333.png.webp">
+
+          <img class="bannerimg"
+            src="https://i0.wp.com/salt.tikicdn.com/cache/200x280/ts/product/ce/18/85/f247be4b654edc5953deb2e1aa7e0b58.jpg">
+
+          <img class="bannerimg"
+            src="https://th.bing.com/th/id/R.2d0fd1388575a7d9378f46926c3e0c4c?rik=09cEiDxFGUuXbw&riu=http%3a%2f%2fstatic4.rongbaycdn.com%2fzoom%2f950_700%2frb_up_mps%2f2020%2f05%2f05%2f0%2frongbay-92509858_2831173623602357_5211341526864494592_n-48gcxf-20200505101205.jpg&ehk=7CdMFgmfCKpuS02RnAK9SP4SgXN%2fvy3p993wLxnPhcA%3d&risl=&pid=ImgRaw&r=0">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000423303/product/buoi_dien_moc_an_50ce365a7fc2436ebff7f4b4ca87da21_grande.png">
+
+          <img class="bannerimg"
+            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/980/products/bi-hat-dau.jpg?v=1611300484683">
+
+          <img class="bannerimg"
+            src="https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000240163/product/0d8048e4e3_4bfd26a97b2142e6a59272580174ca7e_master.png">
+            <img class="bannerimg"
+            src="https://salt.tikicdn.com/cache/750x750/ts/product/59/5b/68/652d4367b27fc417dd9b8bcfce22d333.png.webp">
+
+          <img class="bannerimg"
+            src="https://i0.wp.com/salt.tikicdn.com/cache/200x280/ts/product/ce/18/85/f247be4b654edc5953deb2e1aa7e0b58.jpg">
+
+          <img class="bannerimg"
+            src="https://th.bing.com/th/id/R.2d0fd1388575a7d9378f46926c3e0c4c?rik=09cEiDxFGUuXbw&riu=http%3a%2f%2fstatic4.rongbaycdn.com%2fzoom%2f950_700%2frb_up_mps%2f2020%2f05%2f05%2f0%2frongbay-92509858_2831173623602357_5211341526864494592_n-48gcxf-20200505101205.jpg&ehk=7CdMFgmfCKpuS02RnAK9SP4SgXN%2fvy3p993wLxnPhcA%3d&risl=&pid=ImgRaw&r=0">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000423303/product/buoi_dien_moc_an_50ce365a7fc2436ebff7f4b4ca87da21_grande.png">
+
+          <img class="bannerimg"
+            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/980/products/bi-hat-dau.jpg?v=1611300484683">
+
+          <img class="bannerimg"
+            src="https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000240163/product/0d8048e4e3_4bfd26a97b2142e6a59272580174ca7e_master.png">
+            <img class="bannerimg"
+            src="https://salt.tikicdn.com/cache/750x750/ts/product/59/5b/68/652d4367b27fc417dd9b8bcfce22d333.png.webp">
+
+          <img class="bannerimg"
+            src="https://i0.wp.com/salt.tikicdn.com/cache/200x280/ts/product/ce/18/85/f247be4b654edc5953deb2e1aa7e0b58.jpg">
+
+          <img class="bannerimg"
+            src="https://th.bing.com/th/id/R.2d0fd1388575a7d9378f46926c3e0c4c?rik=09cEiDxFGUuXbw&riu=http%3a%2f%2fstatic4.rongbaycdn.com%2fzoom%2f950_700%2frb_up_mps%2f2020%2f05%2f05%2f0%2frongbay-92509858_2831173623602357_5211341526864494592_n-48gcxf-20200505101205.jpg&ehk=7CdMFgmfCKpuS02RnAK9SP4SgXN%2fvy3p993wLxnPhcA%3d&risl=&pid=ImgRaw&r=0">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000423303/product/buoi_dien_moc_an_50ce365a7fc2436ebff7f4b4ca87da21_grande.png">
+
+          <img class="bannerimg"
+            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/980/products/bi-hat-dau.jpg?v=1611300484683">
+
+          <img class="bannerimg"
+            src="https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000240163/product/0d8048e4e3_4bfd26a97b2142e6a59272580174ca7e_master.png">
+            <img class="bannerimg"
+            src="https://salt.tikicdn.com/cache/750x750/ts/product/59/5b/68/652d4367b27fc417dd9b8bcfce22d333.png.webp">
+
+          <img class="bannerimg"
+            src="https://i0.wp.com/salt.tikicdn.com/cache/200x280/ts/product/ce/18/85/f247be4b654edc5953deb2e1aa7e0b58.jpg">
+
+          <img class="bannerimg"
+            src="https://th.bing.com/th/id/R.2d0fd1388575a7d9378f46926c3e0c4c?rik=09cEiDxFGUuXbw&riu=http%3a%2f%2fstatic4.rongbaycdn.com%2fzoom%2f950_700%2frb_up_mps%2f2020%2f05%2f05%2f0%2frongbay-92509858_2831173623602357_5211341526864494592_n-48gcxf-20200505101205.jpg&ehk=7CdMFgmfCKpuS02RnAK9SP4SgXN%2fvy3p993wLxnPhcA%3d&risl=&pid=ImgRaw&r=0">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000423303/product/buoi_dien_moc_an_50ce365a7fc2436ebff7f4b4ca87da21_grande.png">
+
+          <img class="bannerimg"
+            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/980/products/bi-hat-dau.jpg?v=1611300484683">
+
+          <img class="bannerimg"
+            src="https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000240163/product/0d8048e4e3_4bfd26a97b2142e6a59272580174ca7e_master.png">
+            <img class="bannerimg"
+            src="https://salt.tikicdn.com/cache/750x750/ts/product/59/5b/68/652d4367b27fc417dd9b8bcfce22d333.png.webp">
+
+          <img class="bannerimg"
+            src="https://i0.wp.com/salt.tikicdn.com/cache/200x280/ts/product/ce/18/85/f247be4b654edc5953deb2e1aa7e0b58.jpg">
+
+          <img class="bannerimg"
+            src="https://th.bing.com/th/id/R.2d0fd1388575a7d9378f46926c3e0c4c?rik=09cEiDxFGUuXbw&riu=http%3a%2f%2fstatic4.rongbaycdn.com%2fzoom%2f950_700%2frb_up_mps%2f2020%2f05%2f05%2f0%2frongbay-92509858_2831173623602357_5211341526864494592_n-48gcxf-20200505101205.jpg&ehk=7CdMFgmfCKpuS02RnAK9SP4SgXN%2fvy3p993wLxnPhcA%3d&risl=&pid=ImgRaw&r=0">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000423303/product/buoi_dien_moc_an_50ce365a7fc2436ebff7f4b4ca87da21_grande.png">
+
+          <img class="bannerimg"
+            src="https://bizweb.dktcdn.net/thumb/1024x1024/100/407/980/products/bi-hat-dau.jpg?v=1611300484683">
+
+          <img class="bannerimg"
+            src="https://y5kbp0ifnvobj.vcdn.cloud/uploads/filecloud/2022/July/25/13157-603011658737353-1658737353--400x400.jpg">
+
+          <img class="bannerimg"
+            src="https://product.hstatic.net/200000240163/product/0d8048e4e3_4bfd26a97b2142e6a59272580174ca7e_master.png">
+            
+      </div>
+      </div>
+      
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modal swiper -->  
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

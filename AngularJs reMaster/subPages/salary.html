@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" data-ng-controller="myCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{today|date:"EEEE"}}</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body>
+    <input type="number" data-ng-model="basic">Enter your basic salary:<br /><br />
+    <input type="number" data-ng-model="perc" name="percentage">Enter your bonus percentage:
+    <p>{{salary()|currency:'$':'2'}}</p>
+    Day in week: {{today|date:"medium"}}
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.basic = 0;
+            $scope.perc = 0;
+            $scope.salary = '';
+            $scope.today = new Date;
+            $scope.salary = function () {
+                if ($scope.basic > 0 && $scope.perc > 0) {
+                    return $scope.basic * ($scope.perc / 100 + 1)
+                }
+                else {
+                    return "Invalid Input"
+                }
+
+            }
+        }
+        )
+    </script>
+
+</body>
+
+</html>

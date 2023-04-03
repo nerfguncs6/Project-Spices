@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./src/jquery-3.6.3.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="./src/angular.min.js"></script>
+    <script src="./src/angular-route.js"></script>
+    <link rel="stylesheet" href="./src/swiper-bundle.min.css" />
+    <script src="./src/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./src/bootstrap.min.css" />
+    <link rel="stylesheet" href="../src/bootstrap-icons-1.10.3/bootstrap-icons.css" />
+    <script src="./js/lmao.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/font-awesome.css" media="all">
+
+    <title>FLAVORS Organic Products and Spices</title>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="myCtrl" onload="incrementCount(10)">
+    <!-- Top navigation -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg" style="padding-top: 0; padding-bottom: 0;">
+            <div class="container-fluid" style="background: yellowgreen;">
+                <a class="navbar-brand" href="#!/"><img src="./img/logo.png"
+                        style="width: 100px;height: 80px;padding-top: 0;" alt="" /></a>
+                <!-- visit count -->
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#!/" class="nav-link home" style="color: white;">Home page</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link products" href="#" id="navbardarkdropdownmenulink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                                Category Products
+                                <i class="fa-solid fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu " id="lmao" style="border-radius: 0;">
+                                <div class="row">
+                                    <div class="col-4 border-right-1">
+                                        <strong>The Organic Grass.</strong>
+                                        <a class="dropdown-item" href="#!/raucu" style="color: Black
+                                        ;">View all</a>
+                                    </div>
+                                    <div class="col-4 border border-top-0 border-bottom-0">
+                                        <strong>The Organic Spices.</strong>
+                                        <a class="dropdown-item" href="#!/giavi" style="color: Black
+                                        ;">View all</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>The Organic Fruit.</strong>
+                                        <a class="dropdown-item" href="#!/traicay" style="color: black
+                                        ;">View all</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Best Sellers</strong>
+                                        <a class="dropdown-item" href="#!/bestsale" style="color: black
+                                        ;">View all</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>New Arrivals</strong>
+                                        <a class="dropdown-item" href="#!/new" style="color: black
+                                        ;">View all</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <strong>Hot Deals</strong>
+                                        <a class="dropdown-item" href="#!/hotdeal" style="color: black
+                                        ;">View all</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!silemap" class="nav-link silemap" style="color: white;">Site Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!about" class="nav-link about" style="color: white;">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!info" class="nav-link info" style="color: white;">Contact and info</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!buy" class="nav-link buy" style="color: white;"><i
+                                    class="fa-solid fa-cart-shopping me-3"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa-solid fa-right-to-bracket" style="color: white;"
+                                    data-bs-target="#popUpWindow" data-bs-toggle="modal"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Button trigger 4 side bar -->
+                <button type="button" class="btn btn-yellowgreen" data-bs-toggle="modal" data-bs-target="#sidenav"
+                    style="color: white;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="sidenav" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog sidenava">
+                <div class="modal-content sidenavb" style="width: 300px; ">
+                    <div class="modal-header" style="background: yellowgreen;">
+                        <div class="d-grid gap-2">
+                            <img src="./img/logo.png" alt="" style="width: 250px;" />
+                        </div>
+                    </div>
+                    <div class="modal-body" style="background: yellowgreen;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#/!" class="nav-link home" style="color: white;">
+                                    <i class="fa-solid fa-house"></i> Home page</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item" id="pushdown">
+                                <a class="nav-link products" style="color: white;">
+                                    <i class="fa-solid fa-sack"></i>
+                                    Category Products
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </a>
+                                <ul class="navbar-nav" id="sidenav-products-list">
+                                    <li><a class="nav-link" href="#!raucu" style="color: white;">The Organic Grass.</a>
+                                    </li>
+                                    <li><a class="nav-link" href="#!giavi" style="color: white;">The Organic Spices.</a>
+                                    </li>
+                                    <li><a class="nav-link" href="#!traicay" style="color: white;">The Organic
+                                            Fruit.</a>
+                                    </li>
+                                    <li><a class="nav-link" href="#!bestsale" style="color: white;">Best Sellers</a>
+                                    </li>
+                                    <li><a class="nav-link" href="#!new" style="color: white;">New Arrivals</a></li>
+                                    <li><a class="nav-link" href="#!hotdeal" style="color: white;">Hot Deals</a></li>
+                                </ul>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="#!sitemap" class="nav-link sitemap" style="color: white;">
+                                    <i class="fa-sharp fa-solid fa-sitemap"></i> Site Map</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="#!about" class="nav-link about" style="color: white;"><i
+                                        class="fa-sharp fa-regular fa-circle-user"></i> About us</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="#!info" class="nav-link info" style="color: white;"><i
+                                        class="fa-sharp fa-solid fa-phone"></i> Contact and
+                                    info</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="#!buy" class="nav-link" style="color: white;"><i
+                                        class="fa-solid fa-right-to-bracket"></i> User info</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a href="#!buy" class="nav-link buy" style="color: white;"><i
+                                        class="fa-solid fa-credit-card"></i>Check out</a>
+                            </li>
+                            <hr />
+                        </ul>
+                    </div>
+                    <div class="modal-footer justify-content-around sidenavc" style="background: yellowgreen;">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.google.com/" class="me-4 text-reset">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-ng-view></div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted" style="width: 100%;">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="our-features-box wow bounceInUp animated animated animated" style="visibility: visible; text-align: center;">
+                <div class="container">
+                    <ul>
+                        <li style="background-color:rgb(83, 83, 167);">
+                            <div class="feature-box free-shipping">
+                                <div class="icon-truck"><i class="fa-solid fa-truck"></i></div>
+                                <div class="content" style="color: black;">FREE SHIPPING on order over $99</div>
+                            </div>
+                        </li>
+                        <li style="background-color: rgb(190, 137, 190);">
+                            <div class="feature-box need-help">
+                                <div class="icon-support"><i class="fa-solid fa-phone"></i></div>
+                                <div class="content" style="color: black;">Need Help +1 800 123 1234</div>
+                            </div>
+                        </li>
+                        <li style="background-color: pink;">
+                            <div class="feature-box money-back">
+                                <div class="icon-money"><i class="fa-sharp fa-solid fa-dollar-sign"></i></div>
+                                <div class="content" style="color: black;">Money Back Guarantee</div>
+                            </div>
+                        </li>
+                        <li class="last" style="background-color: rgb(216, 93, 93);">
+                            <div class="feature-box return-policy">
+                                <div class="icon-return"><i class="fa-solid fa-briefcase"></i></div>
+                                <div class="content">30 days return Service</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>The Map
+                        </h6>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1003449.6852539204!2d106.13469869341657!3d10.755639034903153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2sHo%20Chi%20Minh%20City%2C%20Vietnam!5e0!3m2!1sen!2s!4v1677638802059!5m2!1sen!2s"
+                            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <br>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="../product/giavi.html" class="text-reset">Angular</a>
+                        </p>
+
+                        <p>
+                            <a href="https://www.w3schools.com/Js/" class="text-reset">Java Script</a>
+                        </p>
+
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Incentives</h6>
+                        <p><i class="fa-solid fa-door-open me-3"></i> Open 24/24</p>
+                        <p>
+                            <i class="fa-solid fa-truck-fast me-3"></i>
+                            Free Ship
+                        </p>
+                        <p><i class="fa-sharp fa-solid fa-seedling me-3"></i></i> Organic Items</p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i>Nguyen Dinh Chinh Street , Phu Nhuan District </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            tonystarkmarkell@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +84 828 775 229</p>
+                        <p><i class="fas fa-print me-3"></i> +84 828 775 229</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+    </footer>
+    <div class="ticker-wrap">
+        <div class="ticker" style="color: white;">
+            <div class="ticker__item">
+                Visitor count: <span class="website-counter"></span>
+            </div>
+            <div class="ticker__item">Today is: <time id="datetime"></time></div>
+            <div class="ticker__item">
+                Your current location is: <span class="location"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login modal -->
+
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog logina">
+            <div class="modal-content loginb">
+                <!-- header -->
+                <div class="modal-header" style="justify-content: center;">
+                    <div class="d-grid">
+                        <img src="./img/logo.png" alt="" />
+
+                        <!-- Invisible char-->ㅤ
+                        <h1 class="text-center">Login</h1>
+                    </div>
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+                    <form role="form" name="myForm">
+                        <div class="form-group">
+                            <div class="d-grid">
+                                <input type="email" id="abc1" class="form-control" name="input" ng-model="emailid"
+                                    placeholder="Email" required />
+                                <span class="error" ng-show="myForm.input. $error.email"
+                                    style="color: red; font-size: 12px">
+                                    *Not a valid email!</span>
+
+                                <!-- Invisible char-->ㅤ
+                                <input type="password" id="abc2" class="form-control" placeholder="Password"
+                                    ng-model="password" name="password" ng-pattern="re" required />
+                                <span ng-show="myForm.password.$error.pattern" style="color: red; font-size: 12px">
+                                    Not valid password.</span>
+                                <!-- Invisible char-->ㅤ
+                                <div class="form-group text-center">
+                                    <label for="the-terms2"><b>Remember Me</b></label>
+                                    <input type="checkbox" id="the-terms2" />
+                                </div>
+                                <!-- Invisible char-->ㅤ
+                                <button type="submit" class="btn btn-outline-primary" id="enter" disabled="disabled"
+                                    onclick="appp()">
+                                    Enter
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // visit count navbar
+
+
+        // Visitor counter
+        var counterContainer = document.querySelector(".website-counter");
+        var resetButton = document.querySelector("#reset");
+        var visitCount = localStorage.getItem("page_view");
+        if (visitCount) {
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem("page_view", visitCount);
+        } else {
+            visitCount = 1;
+            localStorage.setItem("page_view", 1);
+        }
+        counterContainer.innerHTML = visitCount;
+        // datetime
+        function currenttime() {
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt;
+        }
+        setInterval(currenttime, 5000);
+        //location
+        var $locationText = $(".location");
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                geoLocationSuccess,
+                geoLocationError,
+                { timeout: 10000 }
+            );
+        } else {
+            alert("your browser doesn't support geolocation");
+        }
+        function geoLocationSuccess(pos) {
+            // get user lat,long
+            var myLat = pos.coords.latitude,
+                myLng = pos.coords.longitude,
+                loadingTimeout;
+
+            var loading = function () {
+                $locationText.text("fetching...");
+            };
+
+            loadingTimeout = setTimeout(loading, 600);
+
+            var request = $.get(
+                "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+                myLat +
+                "&lon=" +
+                myLng
+            )
+                .done(function (data) {
+                    if (loadingTimeout) {
+                        clearTimeout(loadingTimeout);
+                        loadingTimeout = null;
+                        $locationText.text(data.display_name);
+                    }
+                })
+                .fail(function () { });
+        }
+
+        function geoLocationError(error) {
+            var errors = {
+                1: "Permission denied",
+                2: "Position unavailable",
+                3: "Request timeout",
+            };
+            alert("Error: " + errors[error.code]);
+        }
+    </script>
+    <script src="./src/jquery-3.6.3.min.js"></script>
+    <script src="./src/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

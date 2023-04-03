@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="myCtrl">
+    <div>
+        <input type="checkbox" ng-model="myVar"> Hide
+        <input type="checkbox" ng-model="myVVar">Show <br /><br />
+        {{myVar != myVVar? "Heaven":"Hell"}}
+        Search<input type="text" ng-model="searchCriteria"> <br />
+        <ol data-ng-hide="myVar" data-ng-show="myVVar">
+            <li data-ng-repeat=" owner in owners">{{owner}}</li>
+        </ol>
+        Result: {{owners |filter:searchCriteria}}
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.owners = ['Bill', 'Steve', 'Jack', 'Base']
+        }
+        )
+    </script>
+
+</body>
+
+</html>

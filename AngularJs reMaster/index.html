@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise</title>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-route.js"></script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="myCtrl">
+    <a href="#/!">Home</a>
+    <a href="#!salary">Salary</a>
+    <a href="#!calc">Calculate</a>
+    <a href="#!search">Search</a>
+    <div data-ng-view style="background-color: lightblue;"></div>
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", { templateUrl: "./subPages/welcome.html", })
+                .when("/salary", { templateUrl: "./subPages/salary.html", })
+                .when("/calc", { templateUrl: "./subPages/calc.html", })
+                .when("/search", { templateUrl: "./subPages/search.html", });
+        });
+        app.controller("myCtrl", function ($scope) {
+        }
+        )
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise</title>
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body data-ng-app="myApp">
+    <my-custom-directive></my-custom-directive>
+    <div my-custom-directive></div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive('myCustomDirective', function () {
+            return {
+                restrict: 'AE',
+                templateUrl: "../subPages/welcome.html"
+            };
+        });
+    </script>
+
+</body>
+
+</html>
